@@ -1,0 +1,170 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>PlomApp - Panel de Administrador</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --brand-blue: #2A6F97;
+        --brand-green: #2EC4B6;
+        --brand-light-blue: #EBF4F8;
+        --brand-dark-blue: #012A4A;
+        --brand-text-primary: #012A4A;
+        --brand-text-secondary: #4A6E82;
+        --brand-background: #F9FAFB;
+        --brand-border: #D1DDE6;
+      }
+      .status-completed {
+        background-color: #E6F8F5;
+        color: #1A7A70;
+      }
+       .status-in-progress {
+        background-color: #FEF9E7;
+        color: #B45309;
+      }
+        .status-pending {
+        background-color: #FEF2F2;
+        color: #B91C1C;
+      }
+    </style>
+</head>
+<body class="bg-[var(--brand-background)]" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex flex-1">
+<aside class="flex flex-col w-64 bg-white border-r border-[var(--brand-border)] p-6 shrink-0">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-[var(--brand-blue)] text-3xl">plumbing</span>
+<h1 class="text-[var(--brand-dark-blue)] text-2xl font-bold">PlomApp</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md bg-[var(--brand-light-blue)] text-[var(--brand-dark-blue)] font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Panel</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Usuarios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">engineering</span>
+<span>Técnicos</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">build</span>
+<span>Servicios</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Pagos</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configuración</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-[var(--brand-light-blue)] text-[var(--brand-text-secondary)] hover:text-[var(--brand-dark-blue)] font-medium" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Cerrar Sesión</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-8">
+<header class="mb-8">
+<h1 class="text-[var(--brand-dark-blue)] text-4xl font-bold tracking-tight">Panel de Administrador</h1>
+<p class="text-[var(--brand-text-secondary)] mt-1">Supervisa la actividad de la plataforma.</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-white rounded-xl p-6 border border-[var(--brand-border)] flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[var(--brand-text-primary)] text-lg font-semibold">Usuarios Activos</p>
+<span class="material-symbols-outlined text-[var(--brand-green)]">group</span>
+</div>
+<p class="text-[var(--brand-dark-blue)] text-4xl font-bold">1,250</p>
+</div>
+<div class="bg-white rounded-xl p-6 border border-[var(--brand-border)] flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[var(--brand-text-primary)] text-lg font-semibold">Técnicos Registrados</p>
+<span class="material-symbols-outlined text-[var(--brand-green)]">engineering</span>
+</div>
+<p class="text-[var(--brand-dark-blue)] text-4xl font-bold">350</p>
+</div>
+<div class="bg-white rounded-xl p-6 border border-[var(--brand-border)] flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<p class="text-[var(--brand-text-primary)] text-lg font-semibold">Servicios Completados</p>
+<span class="material-symbols-outlined text-[var(--brand-green)]">task_alt</span>
+</div>
+<p class="text-[var(--brand-dark-blue)] text-4xl font-bold">875</p>
+</div>
+</div>
+<div class="bg-white rounded-xl border border-[var(--brand-border)] shadow-sm overflow-hidden">
+<h2 class="text-[var(--brand-dark-blue)] text-xl font-bold px-6 py-4">Actividad Reciente</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-gray-50 border-b border-[var(--brand-border)]">
+<tr>
+<th class="px-6 py-3 text-sm font-semibold text-[var(--brand-text-secondary)] uppercase tracking-wider">Usuario</th>
+<th class="px-6 py-3 text-sm font-semibold text-[var(--brand-text-secondary)] uppercase tracking-wider">Técnico</th>
+<th class="px-6 py-3 text-sm font-semibold text-[var(--brand-text-secondary)] uppercase tracking-wider">Servicio</th>
+<th class="px-6 py-3 text-sm font-semibold text-[var(--brand-text-secondary)] uppercase tracking-wider">Fecha</th>
+<th class="px-6 py-3 text-sm font-semibold text-[var(--brand-text-secondary)] uppercase tracking-wider">Estado</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--brand-border)]">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Sofía Ramírez</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Carlos Mendoza</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-blue)] font-medium">Reparación de fuga en cocina</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-secondary)]">2024-07-26</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 text-sm font-semibold rounded-full status-completed">Completado</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Diego Fernández</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Ana López</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-blue)] font-medium">Instalación de calentador</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-secondary)]">2024-07-25</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 text-sm font-semibold rounded-full status-in-progress">En curso</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Isabella Torres</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Juan Pérez</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-blue)] font-medium">Mantenimiento de tuberías</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-secondary)]">2024-07-24</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 text-sm font-semibold rounded-full status-completed">Completado</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Mateo Vargas</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Laura Gómez</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-blue)] font-medium">Desatasco de baño</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-secondary)]">2024-07-23</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 text-sm font-semibold rounded-full status-completed">Completado</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Valentina Castro</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-primary)]">Andrés Ruiz</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-blue)] font-medium">Revisión de gas</td>
+<td class="px-6 py-4 whitespace-nowrap text-base text-[var(--brand-text-secondary)]">2024-07-22</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<span class="px-3 py-1 text-sm font-semibold rounded-full status-pending">Pendiente</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

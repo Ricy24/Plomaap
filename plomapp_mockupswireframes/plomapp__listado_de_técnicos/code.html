@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>PlomApp - Técnicos Disponibles</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-blue: #1193d4;
+        --primary-green: #28a745;
+        --light-gray: #e7eff3;
+        --dark-text: #0d171b;
+        --medium-text: #4c809a;
+      }
+    </style>
+</head>
+<body class="bg-white" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--light-gray)] px-10 py-4 shadow-sm">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-3 text-[var(--dark-text)]" href="#">
+<span class="material-symbols-outlined text-[var(--primary-blue)] text-4xl">plumbing</span>
+<h1 class="text-2xl font-bold leading-tight tracking-tight">PlomApp</h1>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[var(--dark-text)] text-base font-medium hover:text-[var(--primary-blue)] transition-colors" href="#">Inicio</a>
+<a class="text-[var(--dark-text)] text-base font-medium hover:text-[var(--primary-blue)] transition-colors" href="#">Servicios</a>
+<a class="text-[var(--dark-text)] text-base font-medium hover:text-[var(--primary-blue)] transition-colors" href="#">Contacto</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<button class="flex items-center justify-center h-10 px-6 bg-[var(--primary-green)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-green-700 transition-colors">
+<span class="truncate">Solicitar Servicio</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-[var(--primary-blue)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8IdxUGvkxKjzxR6iD2FO4YL4PlLbzZRzllbBRxn3c48b_inLNDNraNNKBxOF6G6AWCbSfpFcGa_9FR2NHlr6PO10QGUm0L0PvDiAU0U2n5mdGAL9VNTQaRdYMpKteauhIR5D7ASpjAy_lofFZAjLLhaM8xBsw9JuaTRonZ-9VtwYRjuzjr1yDC-hFStCwNSolT8tt8-q6sbJApgSyf6HfxDUa3RcrkDYwbTppnucW84TMBdO6w4tw4LaRCGgfznl6H2DZWF7KKiXj");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 bg-slate-50">
+<div class="w-full max-w-6xl px-4 md:px-8">
+<div class="mb-8">
+<h2 class="text-[var(--dark-text)] text-4xl font-bold leading-tight">Técnicos Disponibles</h2>
+<p class="text-[var(--medium-text)] mt-2">Encuentra al profesional ideal para tu necesidad.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<aside class="md:col-span-1 bg-white p-6 rounded-xl shadow-lg">
+<h3 class="text-xl font-bold text-[var(--dark-text)] mb-6">Filtros</h3>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-[var(--medium-text)] mb-2" for="search-technician">Buscar</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute inset-y-0 left-0 flex items-center pl-3 text-[var(--medium-text)]">search</span>
+<input class="form-input w-full rounded-lg border-gray-300 pl-10 focus:ring-[var(--primary-blue)] focus:border-[var(--primary-blue)]" id="search-technician" placeholder="Nombre o especialidad" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--medium-text)] mb-2" for="filter-price">Precio</label>
+<select class="form-select w-full rounded-lg border-gray-300 focus:ring-[var(--primary-blue)] focus:border-[var(--primary-blue)]" id="filter-price">
+<option>Cualquier precio</option>
+<option>Menor a $50.000</option>
+<option>$50.000 - $100.000</option>
+<option>Mayor a $100.000</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--medium-text)] mb-2" for="filter-rating">Valoración</label>
+<select class="form-select w-full rounded-lg border-gray-300 focus:ring-[var(--primary-blue)] focus:border-[var(--primary-blue)]" id="filter-rating">
+<option>Cualquier valoración</option>
+<option>4 estrellas o más</option>
+<option>3 estrellas o más</option>
+<option>2 estrellas o más</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-[var(--medium-text)] mb-2" for="filter-availability">Disponibilidad</label>
+<select class="form-select w-full rounded-lg border-gray-300 focus:ring-[var(--primary-blue)] focus:border-[var(--primary-blue)]" id="filter-availability">
+<option>Cualquier disponibilidad</option>
+<option>Inmediata</option>
+<option>Hoy</option>
+<option>Mañana</option>
+</select>
+</div>
+</div>
+</aside>
+<div class="md:col-span-3">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-lg font-semibold text-[var(--dark-text)]">Resultados: 125 técnicos</h3>
+<div class="flex items-center gap-2">
+<label class="text-sm font-medium text-[var(--medium-text)]" for="sort-by">Ordenar por:</label>
+<select class="form-select rounded-lg border-gray-300 text-sm focus:ring-[var(--primary-blue)] focus:border-[var(--primary-blue)]" id="sort-by">
+<option>Relevancia</option>
+<option>Precio: más bajo primero</option>
+<option>Precio: más alto primero</option>
+<option>Mejor valorados</option>
+</select>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-xl shadow-lg border border-transparent hover:border-[var(--primary-blue)] transition-all duration-300">
+<img alt="Foto de Carlos Ramirez" class="rounded-full size-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd1Qsxw5Myt7HA79VESaI7MM3btWdpjEnONhMXXQGgB7l-wPPyQ1WkHHGdvMb_N8Q03iqRRJvDDyGHf2ztNJBGHiOc2HogvBOX6vW4MMnPdWoQY-luwVdtfnC6s7suEXJ4wavJts0tILUoiX7uTVWR-mKgRQn58-bA7hy30ehZ2J0YLg5GnPjDBS_1pmMbYbC0BhfhzfBxfaZlxaZCeEi6OSzAjntfdHzGGClOLbWBOVCw8Gj_szXSJmLUYOUWdTshusu4jNzV0sxg"/>
+<div class="flex-1 text-center md:text-left">
+<h4 class="text-xl font-bold text-[var(--dark-text)]">Carlos Ramirez</h4>
+<p class="text-[var(--primary-green)] font-semibold text-sm">Disponibilidad: Inmediata</p>
+<p class="text-[var(--medium-text)] text-sm">Especialidad: Plomería</p>
+<div class="flex items-center justify-center md:justify-start gap-2 mt-1">
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star_half</span>
+</div>
+<p class="text-[var(--medium-text)] text-sm">4.8 (125 opiniones)</p>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<p class="text-lg font-bold text-[var(--dark-text)]">$80.000</p>
+<p class="text-xs text-[var(--medium-text)]">Precio estimado</p>
+<button class="w-full md:w-auto mt-2 flex min-w-[120px] items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-blue)] text-white text-sm font-bold shadow-md hover:bg-blue-700 transition-colors">
+                          Seleccionar
+                        </button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-xl shadow-lg border border-transparent hover:border-[var(--primary-blue)] transition-all duration-300">
+<img alt="Foto de Sofia Vargas" class="rounded-full size-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA0s_J9Vfx6ZoFgQ81hT9ZTRO9uo_-3fTWdxDKxGuilOTzBeCiK3KQI1239lef5PqdNTnWmeIA2qiPe3PGsEoqAFmotiBoAxoJLobGhw7CaMxaQFmkXGKVUUUj82YO8lzqCFvvQEFB-N3VLb2mWgor2Zcjo-KLibanTg8nz--pVaEg4YfHBOcLhZfddFgShk6IYVOp_UT3G6MBLsTByBMfU3O3-Fb2ZQX42S1MxWMb1vgcuDczYUMP3avpDmHtRH5cQ3XkA1ce1uig"/>
+<div class="flex-1 text-center md:text-left">
+<h4 class="text-xl font-bold text-[var(--dark-text)]">Sofia Vargas</h4>
+<p class="text-orange-500 font-semibold text-sm">Disponibilidad: Mañana</p>
+<p class="text-[var(--medium-text)] text-sm">Especialidad: Electricidad</p>
+<div class="flex items-center justify-center md:justify-start gap-2 mt-1">
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star_half</span>
+</div>
+<p class="text-[var(--medium-text)] text-sm">4.5 (90 opiniones)</p>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<p class="text-lg font-bold text-[var(--dark-text)]">$70.000</p>
+<p class="text-xs text-[var(--medium-text)]">Precio estimado</p>
+<button class="w-full md:w-auto mt-2 flex min-w-[120px] items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-blue)] text-white text-sm font-bold shadow-md hover:bg-blue-700 transition-colors">
+                          Seleccionar
+                        </button>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-xl shadow-lg border border-transparent hover:border-[var(--primary-blue)] transition-all duration-300">
+<img alt="Foto de Andres Rodriguez" class="rounded-full size-24 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeYfvLcv5hpaZy-0AcWfTQtr6HNPiJthQmtNEPPos20dl-SaJYwWfbz2E5q1fRoNqhgUMAiPO12Jp7zcDfwXd0L7wfS3iQdEdmSW-4W4F6R4R9AT0CjeiUvRrwRQHaroffVweiwSkrCUahhm5DoqxtK2r4tD4OoPP7m5ZweN3Xx9dgs9eXcr2rvND_u1By2mmLYHREIjaO18hsT0r8BUX0QDQKU3MupQFnC1qHRLHt9jPrUyw_a-Mv5y2p9ow3Url-8b41jMhfE7LQ"/>
+<div class="flex-1 text-center md:text-left">
+<h4 class="text-xl font-bold text-[var(--dark-text)]">Andres Rodriguez</h4>
+<p class="text-red-500 font-semibold text-sm">Disponibilidad: Tarde</p>
+<p class="text-[var(--medium-text)] text-sm">Especialidad: Gasodomésticos</p>
+<div class="flex items-center justify-center md:justify-start gap-2 mt-1">
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star</span>
+<span class="material-symbols-outlined !text-base">star_half</span>
+</div>
+<p class="text-[var(--medium-text)] text-sm">4.7 (110 opiniones)</p>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<p class="text-lg font-bold text-[var(--dark-text)]">$90.000</p>
+<p class="text-xs text-[var(--medium-text)]">Precio estimado</p>
+<button class="w-full md:w-auto mt-2 flex min-w-[120px] items-center justify-center rounded-lg h-10 px-4 bg-[var(--primary-blue)] text-white text-sm font-bold shadow-md hover:bg-blue-700 transition-colors">
+                          Seleccionar
+                        </button>
+</div>
+</div>
+</div>
+<nav aria-label="Pagination" class="flex items-center justify-center mt-10">
+<a class="inline-flex items-center justify-center size-10 rounded-full hover:bg-gray-100 text-[var(--medium-text)]" href="#">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<a aria-current="page" class="inline-flex items-center justify-center size-10 rounded-full bg-[var(--primary-blue)] text-white font-bold text-sm mx-1" href="#">1</a>
+<a class="inline-flex items-center justify-center size-10 rounded-full hover:bg-gray-100 text-[var(--dark-text)] font-medium text-sm mx-1" href="#">2</a>
+<a class="inline-flex items-center justify-center size-10 rounded-full hover:bg-gray-100 text-[var(--dark-text)] font-medium text-sm mx-1" href="#">3</a>
+<span class="inline-flex items-center justify-center size-10 text-[var(--medium-text)] text-sm mx-1">...</span>
+<a class="inline-flex items-center justify-center size-10 rounded-full hover:bg-gray-100 text-[var(--dark-text)] font-medium text-sm mx-1" href="#">10</a>
+<a class="inline-flex items-center justify-center size-10 rounded-full hover:bg-gray-100 text-[var(--medium-text)]" href="#">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

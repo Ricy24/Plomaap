@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PlomApp - Servicios de Mantenimiento Domiciliario</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-50: #e3f4fc;
+        --primary-100: #bce9f9;
+        --primary-200: #94dff5;
+        --primary-300: #6cd4f2;
+        --primary-400: #45c9ee;
+        --primary-500: #1dbfeb;
+        --primary-600: #1193d4;--primary-700: #0d70a1;
+        --primary-800: #094e6f;
+        --primary-900: #052b3c;
+        --secondary-50: #e6f6f1;
+        --secondary-100: #cdece4;
+        --secondary-200: #b4e2d7;
+        --secondary-300: #9cd8ca;
+        --secondary-400: #83cebe;
+        --secondary-500: #6ac4b1;
+        --secondary-600: #4caf98;
+        --secondary-700: #388674;
+        --secondary-800: #265c4f;
+        --secondary-900: #13332a;
+        --neutral-50: #f8f9fa;
+        --neutral-100: #e9ecef;
+        --neutral-200: #dee2e6;
+        --neutral-300: #ced4da;
+        --neutral-400: #adb5bd;
+        --neutral-500: #6c757d;
+        --neutral-600: #495057;
+        --neutral-700: #343a40;
+        --neutral-800: #212529;
+        --neutral-900: #0d171b;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="bg-white text-var(--neutral-800)">
+<div class="flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-10 bg-white/80 backdrop-blur-md">
+<nav class="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-2 text-var(--neutral-900)" href="#">
+<span class="material-symbols-outlined text-var(--primary-600) text-3xl">plumbing</span>
+<h1 class="text-2xl font-bold">PlomApp</h1>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-var(--neutral-600) hover:text-var(--primary-600) text-sm font-medium transition-colors" href="#">Inicio</a>
+<a class="text-var(--primary-600) text-sm font-bold" href="#">Servicios</a>
+<a class="text-var(--neutral-600) hover:text-var(--primary-600) text-sm font-medium transition-colors" href="#">Nosotros</a>
+<a class="text-var(--neutral-600) hover:text-var(--primary-600) text-sm font-medium transition-colors" href="#">Contacto</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[150px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-var(--primary-600) text-white text-sm font-bold leading-normal tracking-wide hover:bg-var(--primary-700) transition-colors">
+<span>Solicitar Servicio</span>
+</button>
+<button class="md:hidden p-2">
+<span class="material-symbols-outlined text-var(--neutral-700)">menu</span>
+</button>
+<div class="hidden md:block bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGZRNknJby1amRvU47E_yBt-18Gi-pdieRPlbbZSvorxmTexlgxdTzq8DF9uTSJxBUghPFOoVVE8qIAGEljZF3NCiFEfIc7JvcA_F7NjSfKyme4WhTJ3nMm-v9Yqsb80Eu540QQWFC8ff5-y19R7xTb3hxNpz7OZ064eSPOQb8PwyUAGmb_LH81zL_2aVim46kpjUQvpvXUIYTffGyBFHTbYP_3p67c2AffzAn9O_7FbgsAg1vSJGUbXV6o3tTEmW4LVYytY_-LvAY");'></div>
+</div>
+</nav>
+<div class="h-px bg-var(--neutral-200)"></div>
+</header>
+<main class="flex-grow">
+<section class="bg-var(--neutral-50) py-16 sm:py-20 lg:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-extrabold tracking-tight text-var(--neutral-900) sm:text-4xl">
+                Servicios de Mantenimiento para tu Hogar
+              </h2>
+<p class="mt-4 text-lg text-var(--neutral-600)">
+                Encuentra técnicos profesionales para cualquier reparación que necesites. Rápido, seguro y con precios justos.
+              </p>
+</div>
+<div class="mt-12 max-w-2xl mx-auto">
+<div class="relative">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="material-symbols-outlined text-var(--neutral-400)">search</span>
+</div>
+<input class="block w-full rounded-lg border-2 border-transparent bg-white py-3 pl-10 pr-3 text-var(--neutral-900) placeholder:text-var(--neutral-400) focus:border-var(--primary-500) focus:outline-none focus:ring-var(--primary-500) sm:text-sm" id="search" name="search" placeholder="¿Qué servicio necesitas hoy? (ej. cambiar una bombilla)" type="search"/>
+</div>
+<div class="mt-6 flex flex-wrap justify-center gap-3">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-4 text-sm font-medium text-var(--neutral-700) shadow-sm hover:bg-var(--neutral-100) transition-colors">
+<span>Fontanería</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-4 text-sm font-medium text-var(--neutral-700) shadow-sm hover:bg-var(--neutral-100) transition-colors">
+<span>Electricidad</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-4 text-sm font-medium text-var(--neutral-700) shadow-sm hover:bg-var(--neutral-100) transition-colors">
+<span>Pintura</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white px-4 text-sm font-medium text-var(--neutral-700) shadow-sm hover:bg-var(--neutral-100) transition-colors">
+<span>Jardinería</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-var(--neutral-200) bg-transparent px-4 text-sm font-medium text-var(--neutral-700) hover:bg-var(--neutral-50) transition-colors">
+<span>Más filtros</span>
+<span class="material-symbols-outlined text-base">tune</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-20 lg:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h3 class="text-2xl font-bold tracking-tight text-var(--neutral-900) mb-8">Servicios Populares</h3>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXkfMFWld_CiJvV94Bnzy_R8wPfb_opAfCNsDEmNRmm3-QBU2BUC3hOn-W3FWjBeh0hmB3dvXZ0ZGpNpj2Sd9h--GArJD_UlDkoNCFfk3BHuiOl_20Ct8KJCx2BEZBwNVYeF2G0UNUdZFbJxAjX7dsraFmUe4KPNPCwPjt06P649pU93luf-7_x0uotH5-Swv6jI84uQedNmDBFnibyttB8bGsIGTcalSjLYioCvjYEKri2afi_ECSEhLtxMgqrb13AXlsIrIeGC-y");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Reparación de Grifos</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Solución de fugas y reemplazo de piezas.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Desde $50.000 COP</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGKDJzAm4TyPYfMHSa18vBKkkk8iqdFP1XzpdSKOKvslnsW2Jt5J_uDOXZxplDBO-FWnBGuNmXu7QxGjWyEE6YUwUDCIfcti3_GFTYGh8nh9L_r622OEL1EKEOSqVBwBtYoNa5TJR-sH0UvABmvXBKF0hD4UUMQGSPnuZ92KQVXSQz0lxQDwoD8Y_sHgHf9pJKGny2HqjtkG1MSfQFm1GqrhEy64ZgayEJ_1GoaMlsQQbYGD9qIB6bn6H9ZQxaddmx5HBx4Pu9GN_o");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Instalación de Lámparas</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Instalación y conexión de todo tipo de luminarias.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Desde $45.000 COP</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkPjneSPDNel8tHOfaNrfoNvzZp2ahMLfcz0Xs8vGLklf7lceXcLsuphbXeXP9MdNsSg2vQgQ0rkzEKYjIyK142PD20mz9YruzVS_MUjpD9ELFoFslgyLNzpG0xrS9PhaoEbqn1VQHn_1k1-agWXB0waogH2g3AIgyb48b2WAhcsF_qYPuE7uA55AP1PLihYb8KwW54jbIxigruHHSDtgRZsCcYhdS7WqGjfRhZdL3FICGryWB1pIp8f0j4Qlr6fmdGCdvAPuhTFQy");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Pintura de Interiores</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Paredes y techos con acabados profesionales.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Precio por m²</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIdrixAPy_ODrkA50fUCUsIj0siOygd9VYSc87fGGuoa1Q6-M2VoUQY7CqyOguh10e-LgvtLBL1z-o7EnR_fmCn7v-QGxlmREwKp_Ctq9eJQzutoR3KG6BTPzhy7nfyYlDOuGnjaAJ7pXEA_kp1Mqo57v-C8OTw4mHrP6xaXOmqP8evZvRG-FxAgHsuJ9SZ4LKDMWQK4VOf7JIqZjR8CJLjW7tIgbsdNij94rQGZDVizqspnn5wRTWxKXf4bIVm2zK8Y2McbDPY1uB");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Mantenimiento de Jardines</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Corte de césped, poda y limpieza general.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Desde $80.000 COP</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClmMLmkdITS6FRQQlDrPuL803WDd6sZmwUeofVIMsJ5cyyT6SCc_WCdnsh-xB2Gbm6UcNxhXqozkpDDsK15JoCZ9rqzgoORMZlV0wpyC4IE7_uLTgNXaXCnhFiZFOmp3321_sPEilFvRUd-3OvR71vbSZ92FtJx1wHkBJ0PMjsvYjhqEX3xwvt_RrLvCCmElG_jM0EZVi_aG0JmQCbpA7gvQBckrGXZE4ZZvszIdlwcceRrXciBNL_7MfSEcG01Xrn0FEy9vZR8Tyo");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Reparación de Electrodomésticos</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Lavadoras, refrigeradores y más.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Sujeto a diagnóstico</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-xl">
+<div class="aspect-h-9 aspect-w-16">
+<div class="h-full w-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtTHyZmmq56pH74vqpi2e6124lcSrohIBwHd0BTQ793sPeFdxZuTPDtDa8qy6iCCh2vAjCReDtE-tCR-FhS5I2RVgVNZE5t6ynZupLCh8jyYmhncabJIh-2ZKBl_-_d2ss9VhHHVwxpvuBqI5-4m03YBevrrEaN7elRJnzykgcaje5FUOrkU8ZaljILyvABc6esLkc7_mOVT26pRuOnDOxRee9riCOBCEyLKQ3sFkbnZxgr-ilLJSazOwId-THtG_hG931v1989Kl7");'></div>
+</div>
+<div class="p-6">
+<h4 class="text-lg font-bold text-var(--neutral-800)">Instalación de Calentadores</h4>
+<p class="mt-1 text-sm text-var(--neutral-600)">Instalación y mantenimiento de calentadores de agua.</p>
+<p class="mt-4 text-base font-semibold text-var(--secondary-700)">Desde $120.000 COP</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-var(--neutral-900) text-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-var(--primary-500) text-3xl">plumbing</span>
+<h1 class="text-2xl font-bold">PlomApp</h1>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Inicio</a>
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Servicios</a>
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Nosotros</a>
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Contacto</a>
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="text-sm text-var(--neutral-300) hover:text-white transition-colors" href="#">Términos</a>
+</nav>
+</div>
+<div class="mt-8 pt-8 border-t border-var(--neutral-700) text-center text-sm text-var(--neutral-400)">
+<p>© 2024 PlomApp. Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

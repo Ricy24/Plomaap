@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>PlomApp - Calendario</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --brand-blue: #1193d4;
+        --brand-green: #28a745;
+        --light-gray: #f8f9fa;
+        --dark-gray: #343a40;
+        --text-color: #0d171b;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-gray-50 font-manrope text-[var(--text-color)]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<div class="flex h-full grow">
+<aside class="flex h-full min-h-screen flex-col justify-between bg-white p-4 shadow-md w-64">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8kscSsoH0HGEPp09VvriiyGEGcOwt1-2vw3jqVam9B3ro0PSj_-EzHbSjvXlNv69eqa01Fm12t_RYj9yhZPDgRDbcQPgQ_kuK3jao0jnAyevYFh84-gupbD-lPJeIIGGZOsjkpyhNKy9aqblYrUrF0TGgAdsNAxOttWoOR0e83juRW4KXuXKqrTGM_esjJAjRGtCYnbXsXzcjUOXjyoMe2YuD6S2Kby8qGO5f-tKMjAaCnRh-K2haTt_VxPuqb0Z9Ae8IyUH0HWaB");'></div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold text-gray-800">Carlos R.</h1>
+<p class="text-sm font-medium text-gray-500">Técnico</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined text-gray-600">home</span>
+<p class="text-sm font-medium">Inicio</p>
+</a>
+<a class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined text-gray-600">list_alt</span>
+<p class="text-sm font-medium">Solicitudes</p>
+</a>
+<a class="flex items-center gap-3 rounded-md bg-[var(--brand-blue)] bg-opacity-10 px-3 py-2 text-[var(--brand-blue)]" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-bold">Calendario</p>
+</a>
+<a class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined text-gray-600">person</span>
+<p class="text-sm font-medium">Perfil</p>
+</a>
+<a class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined text-gray-600">payments</span>
+<p class="text-sm font-medium">Pagos</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-700 hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined text-gray-600">logout</span>
+<p class="text-sm font-medium">Cerrar Sesión</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-6 lg:p-8">
+<div class="mx-auto max-w-7xl">
+<header class="mb-8">
+<h1 class="text-3xl font-bold text-gray-800">Calendario de Disponibilidad</h1>
+<p class="mt-2 text-gray-500">Actualiza tus horarios para que los clientes puedan agendar servicios.</p>
+</header>
+<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+<div class="lg:col-span-2">
+<div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+<div class="flex items-center justify-between">
+<button class="rounded-full p-2 hover:bg-gray-100">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="text-lg font-semibold text-gray-700">Julio 2024</p>
+<button class="rounded-full p-2 hover:bg-gray-100">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="mt-4 grid grid-cols-7 gap-1 text-center">
+<p class="text-xs font-bold uppercase text-gray-400">Dom</p>
+<p class="text-xs font-bold uppercase text-gray-400">Lun</p>
+<p class="text-xs font-bold uppercase text-gray-400">Mar</p>
+<p class="text-xs font-bold uppercase text-gray-400">Mié</p>
+<p class="text-xs font-bold uppercase text-gray-400">Jue</p>
+<p class="text-xs font-bold uppercase text-gray-400">Vie</p>
+<p class="text-xs font-bold uppercase text-gray-400">Sáb</p>
+<button class="h-10 w-10 text-sm font-medium text-gray-400">30</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">1</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">2</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">3</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">4</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-green)] bg-opacity-20 text-[var(--brand-green)] text-sm font-bold">5</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-green)] bg-opacity-20 text-[var(--brand-green)] text-sm font-bold">6</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">7</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-blue)] text-white text-sm font-bold">8</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-blue)] bg-opacity-20 text-[var(--brand-blue)] text-sm font-bold">9</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-blue)] bg-opacity-20 text-[var(--brand-blue)] text-sm font-bold">10</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-blue)] bg-opacity-20 text-[var(--brand-blue)] text-sm font-bold">11</button>
+<button class="h-10 w-10 rounded-full bg-[var(--brand-blue)] bg-opacity-20 text-[var(--brand-blue)] text-sm font-bold">12</button>
+<button class="h-10 w-10 rounded-full bg-red-100 text-red-500 text-sm font-bold">13</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">14</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">15</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">16</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">17</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">18</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">19</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">20</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">21</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">22</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">23</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">24</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">25</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">26</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">27</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">28</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">29</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">30</button>
+<button class="h-10 w-10 rounded-full text-sm font-medium hover:bg-gray-100">31</button>
+<button class="h-10 w-10 text-sm font-medium text-gray-400">1</button>
+<button class="h-10 w-10 text-sm font-medium text-gray-400">2</button>
+<button class="h-10 w-10 text-sm font-medium text-gray-400">3</button>
+</div>
+<div class="mt-6 flex flex-wrap items-center gap-4 text-sm">
+<div class="flex items-center gap-2">
+<div class="h-4 w-4 rounded-full bg-[var(--brand-blue)]"></div>
+<span>Día seleccionado</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-4 w-4 rounded-full bg-[var(--brand-blue)] bg-opacity-20"></div>
+<span>Disponible</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-4 w-4 rounded-full bg-[var(--brand-green)] bg-opacity-20"></div>
+<span>Fin de semana</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-4 w-4 rounded-full bg-red-100"></div>
+<span>Día bloqueado</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+<h3 class="text-lg font-semibold text-gray-800">Gestionar Disponibilidad</h3>
+<p class="mt-1 text-sm text-gray-500">Selecciona un día y modifica los horarios.</p>
+<div class="mt-4 space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700" for="date-select">Día seleccionado</label>
+<input class="mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-sm sm:text-sm" id="date-select" readonly="" type="text" value="Lunes, 8 de Julio, 2024"/>
+</div>
+<div>
+<p class="block text-sm font-medium text-gray-700">Horarios del día</p>
+<div class="mt-2 space-y-2">
+<div class="flex items-center justify-between rounded-md bg-green-50 p-2">
+<span class="text-sm text-green-800">09:00 AM - 10:00 AM</span>
+<button class="text-green-600 hover:text-green-800">
+<span class="material-symbols-outlined text-lg">lock_open</span>
+</button>
+</div>
+<div class="flex items-center justify-between rounded-md bg-green-50 p-2">
+<span class="text-sm text-green-800">10:00 AM - 11:00 AM</span>
+<button class="text-green-600 hover:text-green-800">
+<span class="material-symbols-outlined text-lg">lock_open</span>
+</button>
+</div>
+<div class="flex items-center justify-between rounded-md bg-red-50 p-2">
+<span class="text-sm text-red-800 line-through">11:00 AM - 12:00 PM</span>
+<button class="text-red-600 hover:text-red-800">
+<span class="material-symbols-outlined text-lg">lock</span>
+</button>
+</div>
+<div class="flex items-center justify-between rounded-md bg-green-50 p-2">
+<span class="text-sm text-green-800">02:00 PM - 03:00 PM</span>
+<button class="text-green-600 hover:text-green-800">
+<span class="material-symbols-outlined text-lg">lock_open</span>
+</button>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="action-select">Acción Rápida</label>
+<select class="form-select mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[var(--brand-blue)] focus:ring-[var(--brand-blue)] sm:text-sm" id="action-select">
+<option>Bloquear todo el día</option>
+<option>Abrir todo el día</option>
+<option>Bloquear franja horaria</option>
+</select>
+</div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="flex items-center justify-center gap-2 rounded-md border border-transparent bg-[var(--brand-blue)] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--brand-blue)] focus:ring-offset-2">
+<span class="material-symbols-outlined text-lg">save</span>
+                        Guardar Cambios
+                      </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

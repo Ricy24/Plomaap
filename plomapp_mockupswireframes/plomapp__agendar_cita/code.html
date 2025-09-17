@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>PlomApp - Agendar Cita</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1193d4;
+        --secondary-color: #2dd4bf;
+        --text-primary: #18181b;
+        --text-secondary: #52525b;
+        --background-light: #ffffff;
+        --background-soft: #f8fafc;
+        --border-color: #e2e8f0;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      .hover-lift {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-soft)]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+<header class="sticky top-0 z-20 w-full bg-white/80 backdrop-blur-lg">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 sm:px-6 lg:px-8 py-4">
+<div class="flex items-center gap-3 text-zinc-900">
+<div class="text-[var(--primary-color)]">
+<svg class="h-10 w-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+</div>
+<h1 class="text-2xl font-bold leading-tight tracking-tight text-zinc-900">PlomApp</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-zinc-700 hover:text-[var(--primary-color)] transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium text-zinc-700 hover:text-[var(--primary-color)] transition-colors" href="#">Servicios</a>
+<a class="text-sm font-medium text-zinc-700 hover:text-[var(--primary-color)] transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+<span class="material-symbols-outlined">
+                notifications
+                </span>
+</button>
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDybH4Z_3-XlrDghcvm0WseurIKrEeE4vcAsAGa68RupyPeVF-7KBLmxCaNcH4C8zQ1xVl2hv-5zNGxvQ0MhSfJIuxnR3_hKxzpPOwDh0lZxpHR0Ie2CnosBSpBBG48BJwK2AVAe9fyXmkegxbYPwiq6uYUSXKUEOb_bAcxwFSnmnXN_Vrn293DnYTCGPjYOwl1sg7MgRu0B3QGJ7XeXfwx_S5xVKGmykmKW0ihn4HK9MJ8Cqis2s8y8eOlAuPhSRNc91YwP06JPFXY");'></div>
+<div class="hidden sm:flex flex-col text-left">
+<p class="text-sm font-semibold text-zinc-800">Ana Lucía</p>
+<p class="text-xs text-zinc-500">Cliente</p>
+</div>
+</div>
+<button class="md:hidden flex items-center justify-center rounded-full h-10 w-10 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-[var(--border-color)]">
+<div class="flex flex-col gap-2 mb-8">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] tracking-tight">Selecciona la fecha y hora</h2>
+<p class="text-[var(--text-secondary)]">Elige el momento que mejor se adapte a tu agenda para la visita del técnico.</p>
+</div>
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 rounded-full hover:bg-zinc-100 transition-colors">
+<span class="material-symbols-outlined text-zinc-500">chevron_left</span>
+</button>
+<p class="text-lg font-semibold text-zinc-800">Julio 2024</p>
+<button class="p-2 rounded-full hover:bg-zinc-100 transition-colors">
+<span class="material-symbols-outlined text-zinc-500">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<p class="text-xs font-bold text-zinc-500 py-2">DO</p>
+<p class="text-xs font-bold text-zinc-500 py-2">LU</p>
+<p class="text-xs font-bold text-zinc-500 py-2">MA</p>
+<p class="text-xs font-bold text-zinc-500 py-2">MI</p>
+<p class="text-xs font-bold text-zinc-500 py-2">JU</p>
+<p class="text-xs font-bold text-zinc-500 py-2">VI</p>
+<p class="text-xs font-bold text-zinc-500 py-2">SA</p>
+<span class="col-start-3"></span>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">1</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">2</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">3</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">4</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full bg-[var(--primary-color)] text-white text-sm font-medium shadow-md">5</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">6</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">7</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">8</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">9</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">10</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">11</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">12</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">13</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">14</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">15</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">16</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">17</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">18</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">19</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">20</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">21</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">22</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">23</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">24</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">25</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">26</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">27</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">28</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">29</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">30</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-full hover:bg-zinc-100 text-sm font-medium text-zinc-700 transition-colors">31</button>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-white p-8 rounded-2xl shadow-lg border border-[var(--border-color)]">
+<h3 class="text-xl font-bold text-[var(--text-primary)] mb-4">Detalles de la cita</h3>
+<div class="space-y-6">
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-white px-1 text-xs font-medium text-zinc-500" for="time">Hora</label>
+<select class="form-select w-full rounded-lg border-[var(--border-color)] focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)]/20 py-3 text-zinc-800" id="time">
+<option>Selecciona la hora</option>
+<option>09:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>04:00 PM</option>
+</select>
+</div>
+<div class="relative">
+<label class="absolute -top-2 left-2 inline-block bg-white px-1 text-xs font-medium text-zinc-500" for="details">Detalles adicionales (opcional)</label>
+<textarea class="form-textarea w-full rounded-lg border-[var(--border-color)] focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)]/20 min-h-32 text-zinc-800 placeholder:text-zinc-400" id="details" placeholder="Ej: El grifo de la cocina gotea constantemente."></textarea>
+</div>
+<label class="flex items-center gap-x-3">
+<input checked="" class="h-5 w-5 rounded border-zinc-300 text-[var(--primary-color)] focus:ring-[var(--primary-color)]" type="checkbox"/>
+<p class="text-zinc-700 text-sm">Recibir notificaciones por correo electrónico</p>
+</label>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-14 px-6 bg-[var(--primary-color)] text-white text-lg font-bold shadow-lg shadow-[var(--primary-color)]/30 hover:bg-opacity-90 transition-all hover-lift">
+<span class="material-symbols-outlined">
+                event_available
+              </span>
+<span>Confirmar Cita</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PlomApp - Pago de Servicio</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --radio-dot-svg: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='rgb(34, 197, 94)' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-white">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white shadow-sm sticky top-0 z-10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+<div class="text-blue-600">
+<svg class="h-8 w-8 text-[#1193d4]" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.24l-3.32-3.32a.75.75 0 1 1 1.06-1.06L11 14.12l4.29-4.29a.75.75 0 1 1 1.06 1.06L12.06 15.3a.75.75 0 0 1-1.06 0z" fill-rule="evenodd"></path></svg>
+</div>
+<h1 class="text-xl font-bold text-gray-800">PlomApp</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600" href="#">Inicio</a>
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600" href="#">Servicios</a>
+<a class="text-sm font-medium text-gray-600 hover:text-blue-600" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-700">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyxKt0W9EwCZ84z_zV9_rfuV9TraKhV7oVPrqE0yKvcIzK18q7HyXNMCQ_LDgdVE6bciUiZxsIYI_6I6iLxpEGVSCprk088X_zSCe_hZX_Aurn-O0kjgnJzbc8M4125TTGMm50cQvq1IuWKXNryflP6d-MJTQmc4LnyFDBGaoI2z7iSdNWBhbiea6Ay5wjT5wvESMP_dvXhLYk9fPFi1BE6aAmyCEp0G8Y5P4z1Ia1qLD36gnXGf9pG-FMr3d-6W7XUQUq4z0M6oI8");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow bg-slate-50 py-12">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="bg-white p-8 rounded-xl shadow-md">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Detalles del Pago</h2>
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-semibold text-gray-700 mb-4">Selecciona tu método de pago</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 cursor-pointer has-[:checked]:border-green-500 has-[:checked]:bg-green-50 transition-all">
+<input checked="" class="h-5 w-5 border-2 border-gray-300 text-transparent checked:border-green-500 checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+<span class="text-sm font-medium text-gray-700">Tarjeta de Crédito</span>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 cursor-pointer has-[:checked]:border-green-500 has-[:checked]:bg-green-50 transition-all">
+<input class="h-5 w-5 border-2 border-gray-300 text-transparent checked:border-green-500 checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+<span class="text-sm font-medium text-gray-700">PSE (Pagos Seguros en Línea)</span>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 cursor-pointer has-[:checked]:border-green-500 has-[:checked]:bg-green-50 transition-all">
+<input class="h-5 w-5 border-2 border-gray-300 text-transparent checked:border-green-500 checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="payment_method" type="radio"/>
+<span class="text-sm font-medium text-gray-700">Efecty</span>
+</label>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-700 mb-4">Opciones de Servicio</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 cursor-pointer has-[:checked]:border-green-500 has-[:checked]:bg-green-50 transition-all">
+<input checked="" class="h-5 w-5 border-2 border-gray-300 text-transparent checked:border-green-500 checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="service_option" type="radio"/>
+<div class="grow">
+<p class="text-sm font-medium text-gray-700">Servicio Regular</p>
+<p class="text-xs text-gray-500">Atención estándar</p>
+</div>
+</label>
+<label class="flex items-center gap-4 p-4 rounded-lg border border-gray-200 cursor-pointer has-[:checked]:border-green-500 has-[:checked]:bg-green-50 transition-all">
+<input class="h-5 w-5 border-2 border-gray-300 text-transparent checked:border-green-500 checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0" name="service_option" type="radio"/>
+<div class="grow">
+<p class="text-sm font-medium text-gray-700 flex items-center gap-2">Servicio Express <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded-full">Prioridad</span></p>
+<p class="text-xs text-gray-500">Atención prioritaria con técnico especializado</p>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-md">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">Resumen del Pedido</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center py-4 border-b border-gray-200">
+<p class="text-sm text-gray-500">Servicio</p>
+<p class="text-sm font-medium text-gray-800">Reparación de fuga de agua</p>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-gray-200">
+<p class="text-sm text-gray-500">Fecha</p>
+<p class="text-sm font-medium text-gray-800">15 de Julio de 2024</p>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-gray-200">
+<p class="text-sm text-gray-500">Hora</p>
+<p class="text-sm font-medium text-gray-800">10:00 AM</p>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-gray-200">
+<p class="text-sm text-gray-500">Dirección</p>
+<p class="text-sm font-medium text-gray-800">Calle 123 #45-67, Bogotá</p>
+</div>
+</div>
+<div class="space-y-2 py-6 border-t border-gray-200">
+<div class="flex justify-between text-sm text-gray-600">
+<span>Subtotal</span>
+<span>$80.000</span>
+</div>
+<div class="flex justify-between text-sm text-gray-600">
+<span>IVA (19%)</span>
+<span>$15.200</span>
+</div>
+<div class="flex justify-between text-sm text-gray-600">
+<span>Tarifa de servicio</span>
+<span>$800</span>
+</div>
+<div class="flex justify-between text-lg font-bold text-gray-800 pt-4">
+<span>Total</span>
+<span>$96.000</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 h-12 px-6 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300">
+<span class="material-symbols-outlined">lock</span>
+<span>Confirmar y Pagar de forma segura</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>PlomApp - Perfil del Técnico</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --plomapp-blue: #1193d4;
+            --plomapp-green: #28a745;
+            --plomapp-white: #ffffff;
+            --plomapp-light-gray: #f8f9fa;
+            --plomapp-gray: #e9ecef;
+            --plomapp-dark-gray: #6c757d;
+            --plomapp-text: #212529;
+        }
+        .bg-plomapp-blue {
+            background-color: var(--plomapp-blue);
+        }
+        .text-plomapp-blue {
+            color: var(--plomapp-blue);
+        }
+        .border-plomapp-blue {
+            border-color: var(--plomapp-blue);
+        }
+        .bg-plomapp-green {
+            background-color: var(--plomapp-green);
+        }
+        .text-plomapp-green {
+            color: var(--plomapp-green);
+        }
+        .bg-plomapp-light-gray {
+            background-color: var(--plomapp-light-gray);
+        }
+        .border-plomapp-gray {
+            border-color: var(--plomapp-gray);
+        }
+    </style>
+</head>
+<body class="bg-plomapp-light-gray" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex flex-col min-h-screen">
+<header class="bg-plomapp-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto flex items-center justify-between whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-3 text-plomapp-text">
+<span class="material-symbols-outlined text-plomapp-blue text-4xl">plumbing</span>
+<h1 class="text-2xl font-bold">PlomApp</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-plomapp-text font-medium hover:text-plomapp-blue transition-colors" href="#">Inicio</a>
+<a class="text-plomapp-text font-medium hover:text-plomapp-blue transition-colors" href="#">Servicios</a>
+<a class="text-plomapp-blue font-bold" href="#">Técnicos</a>
+<a class="text-plomapp-text font-medium hover:text-plomapp-blue transition-colors" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-plomapp-gray transition-colors">
+<span class="material-symbols-outlined text-plomapp-dark-gray">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-plomapp-blue" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDOIIwuRQlp3SGGgVo7RrFgA5Gl6OelEvgazdy3i9NA44onXA2p2Q60dwwNHOoF3NhQ3VlkKb0AcF_FJeSpwpBK_JeAX7Zgrdsd_VMeHbtYi9eD9GukhInPzxMbOyfHMv4hCGYGc01TyKgIM3aG8fC60s6ABMBMZ_XOOX2bbIdb2aNDIVaUVx5NLfX3jmMFHUylRmeAD3MixXyz-VkBuKC3WPbEMTyw1Mv-iz7ZUZScKZE66hXZrJI5Yb2WDhGVBZ7hnY7YpZdImuCG");'></div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="bg-plomapp-white p-6 sm:p-8 rounded-2xl shadow-lg">
+<div class="flex flex-col md:flex-row items-center gap-8 mb-8">
+<div class="relative bg-center bg-no-repeat aspect-square bg-cover rounded-full size-40 border-4 border-plomapp-green shadow-md" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZjVkOXuO6KegtVtiWTcOk8vcnGx0tqc-j5bYrMIn-1a9unP6fFSzKqAeIguURQh-U9UXEx83tb4brBgWvZhSNiyO1-s5Hgz1w2chWfRv-kL-8fUUZCBfCmPYv9pJXGUmmMSxq1crR2rjyEjSpH1RtLhtwCX_n4xXW4TIIpIHubMkqC79TWTjm6VQegvPtsQcfP9ByvW7-O_3P3dGSKL7SBX86AGscW1IxA0JiWg9-M5rXyyWEKyc0cwENd85gLqSTvgDz3DwyVw5X");'>
+<div class="absolute bottom-2 right-2 bg-plomapp-green text-white p-1.5 rounded-full">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+</div>
+<div class="text-center md:text-left">
+<h2 class="text-3xl font-bold text-plomapp-text">Carlos Ramirez</h2>
+<p class="text-lg text-plomapp-blue font-semibold">Técnico en Plomería</p>
+<div class="flex items-center justify-center md:justify-start gap-2 mt-2 text-plomapp-dark-gray">
+<span class="material-symbols-outlined text-lg">location_on</span>
+<span>Bogotá, Colombia</span>
+</div>
+</div>
+<div class="md:ml-auto flex flex-col items-center md:items-end gap-4">
+<button class="w-full md:w-auto flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-plomapp-blue text-plomapp-white text-base font-bold hover:bg-opacity-90 transition-all shadow-md">
+<span class="material-symbols-outlined">call</span>
+<span>Contactar a Carlos</span>
+</button>
+<div class="text-sm text-plomapp-dark-gray">Miembro desde 2018</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">description</span>Sobre Mí</h3>
+<p class="text-plomapp-dark-gray">
+                                Carlos Ramirez cuenta con más de 10 años de experiencia en el sector de la plomería, especializado en reparaciones de tuberías, instalaciones sanitarias y
+                                mantenimiento general. Ha trabajado en proyectos residenciales y comerciales, garantizando siempre un servicio de alta calidad y satisfacción del cliente.
+                            </p>
+</div>
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">work_history</span>Experiencias (Portafolio)</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="border border-plomapp-gray rounded-lg overflow-hidden group">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9W-2vXm-jslWXJZJhIstGfmBD2OJg3P50OvUj-8modFb4Io8zuWy75bvuXojTGoKHHLgN9lQotQpSa06k1f9QjhQl2FH6OV-ikAJocVuk5hgyKVlx9u1CqS7H1eQnKkWFaObZAzP6Vl5mpfbKokzxXh__NbTLQHgDqUuQ8-L255s5IrGzIbcyTXVIee_oK0bJcFsUU0F3qnCTze-KxSmyBvapvLVGyz3Zt6ZKgJZb4Az9Dledo8IbNQ6V4Z4F4KqPeWPzWJlPONfO');"></div>
+<div class="p-4 bg-white">
+<h4 class="font-bold text-plomapp-text">Instalación Completa en Obra Nueva</h4>
+<p class="text-sm text-plomapp-dark-gray mt-1">Se realizó la instalación de todo el sistema de tuberías y sanitarios en un edificio residencial. Un proyecto completado a tiempo y dentro del presupuesto.</p>
+</div>
+</div>
+<div class="border border-plomapp-gray rounded-lg overflow-hidden group">
+<div class="bg-center bg-no-repeat aspect-video bg-cover" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9W-2vXm-jslWXJZJhIstGfmBD2OJg3P50OvUj-8modFb4Io8zuWy75bvuXojTGoKHHLgN9lQotQpSa06k1f9QjhQl2FH6OV-ikAJocVuk5hgyKVlx9u1CqS7H1eQnKkWFaObZAzP6Vl5mpfbKokzxXh__NbTLQHgDqUuQ8-L255s5IrGzIbcyTXVIee_oK0bJcFsUU0F3qnCTze-KxSmyBvapvLVGyz3Zt6ZKgJZb4Az9Dledo8IbNQ6V4Z4F4KqPeWPzWJlPONfO');"></div>
+<div class="p-4 bg-white">
+<h4 class="font-bold text-plomapp-text">Reparación Urgente de Fuga Mayor</h4>
+<p class="text-sm text-plomapp-dark-gray mt-1">Atención de emergencia para una fuga de agua en un local comercial, minimizando daños y restaurando el servicio en pocas horas.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">workspace_premium</span>Certificaciones</h3>
+<div class="flex items-center gap-4 bg-plomapp-light-gray p-4 rounded-lg">
+<span class="material-symbols-outlined text-3xl text-plomapp-blue">verified_user</span>
+<div>
+<h4 class="font-bold text-plomapp-text">Certificado en Plomería Avanzada</h4>
+<p class="text-sm text-plomapp-dark-gray">Institución Nacional de Plomería - 2020</p>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">reviews</span>Reseñas de Usuarios</h3>
+<div class="space-y-6">
+<div class="flex flex-col gap-3 border-b border-plomapp-gray pb-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuADwe2BJS3grahRLnR4aQeDPnh8ZJx11sW9SYbiyEdpet5YnDtPkAlC5mBZ4IFJQ_W6KWUpllzv1anjSRruOTF1W-sG5iyDN8v7crSaLtlyFQWHD75mftd7DbX-QgH-SPFLHTcZ1FuDsGVBKqLMtEUnWaRWpbqBmYw5yQZLu2m025AGjSja8Wf0D_74VRHlxJJbgeIt_bJ8c4kYfLrTb4mXc1SwvcSKNbi3aBX-RgDl1TSKy9yY8iDKhJz7Ne9fWY3VIqAbXUHjTByj");'></div>
+<div>
+<p class="font-semibold text-plomapp-text">Sofia Vargas</p>
+<p class="text-sm text-plomapp-dark-gray">15 de Agosto, 2023</p>
+</div>
+<div class="ml-auto flex gap-1 text-plomapp-blue">
+<span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span>
+</div>
+</div>
+<p class="text-plomapp-dark-gray italic">"Excelente servicio, muy profesional y rápido. Resolvió el problema de mi tubería en tiempo récord."</p>
+</div>
+<div class="flex flex-col gap-3 border-b border-plomapp-gray pb-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb1gfwMUBwfelKIYarO4qxb0uFyeIeMoSeUIwL2s5EIPce7zw-uAkKtkiXthLQqA8oIf4KOfkDX8Yig7GuRn7vufiq7ueegu6PE9DfPSEWQWevDcjkDHNVF1bc12ehAiLgiL8AjeBhBkTeanWEI_2xjLrgRfG4_AGPhqn6qV6J58VKtJtqqaoPg5Dv62A-sztdq-LnHz__HZONGxIrdj7c7yttylG2PSOuUYVdRhxRBgArUuILrIKZdVl12RHrb0UeisPRPm8544gb");'></div>
+<div>
+<p class="font-semibold text-plomapp-text">Daniel Mendoza</p>
+<p class="text-sm text-plomapp-dark-gray">20 de Julio, 2023</p>
+</div>
+<div class="ml-auto flex gap-1 text-plomapp-blue">
+<span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg">star</span><span class="material-symbols-outlined text-lg text-gray-300">star</span>
+</div>
+</div>
+<p class="text-plomapp-dark-gray italic">"Buen trabajo, aunque llegó un poco tarde. La reparación quedó bien hecha."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">price_check</span>Precios y Tarifas</h3>
+<div class="space-y-3 text-plomapp-text">
+<div class="flex justify-between items-center">
+<span>Visita de diagnóstico:</span>
+<span class="font-bold text-plomapp-green">$50.000 COP</span>
+</div>
+<div class="flex justify-between items-center border-t border-plomapp-gray pt-3">
+<span>Reparación de Fugas:</span>
+<span class="font-semibold">Desde $80.000</span>
+</div>
+<div class="flex justify-between items-center border-t border-plomapp-gray pt-3">
+<span>Instalación de grifería:</span>
+<span class="font-semibold">Desde $70.000</span>
+</div>
+<div class="flex justify-between items-center border-t border-plomapp-gray pt-3">
+<span>Mantenimiento general:</span>
+<span class="font-semibold">Bajo cotización</span>
+</div>
+</div>
+<p class="text-xs text-plomapp-dark-gray mt-4">* Los precios son una base y pueden variar según la complejidad del trabajo.</p>
+</div>
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">star</span>Calificación General</h3>
+<div class="flex items-center gap-4">
+<p class="text-6xl font-black text-plomapp-blue">4.8</p>
+<div class="flex flex-col">
+<div class="flex gap-0.5 text-plomapp-blue">
+<span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star_half</span>
+</div>
+<p class="text-plomapp-dark-gray">Basado en 150 reseñas</p>
+</div>
+</div>
+<div class="space-y-2 mt-4">
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-plomapp-dark-gray w-8">5 <span class="material-symbols-outlined text-sm">star</span></p>
+<div class="flex-1 h-2.5 bg-plomapp-gray rounded-full">
+<div class="bg-plomapp-green h-2.5 rounded-full" style="width: 70%;"></div>
+</div>
+<p class="text-sm font-medium text-plomapp-dark-gray w-10 text-right">70%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-plomapp-dark-gray w-8">4 <span class="material-symbols-outlined text-sm">star</span></p>
+<div class="flex-1 h-2.5 bg-plomapp-gray rounded-full">
+<div class="bg-plomapp-green h-2.5 rounded-full" style="width: 20%;"></div>
+</div>
+<p class="text-sm font-medium text-plomapp-dark-gray w-10 text-right">20%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-plomapp-dark-gray w-8">3 <span class="material-symbols-outlined text-sm">star</span></p>
+<div class="flex-1 h-2.5 bg-plomapp-gray rounded-full">
+<div class="bg-plomapp-blue h-2.5 rounded-full" style="width: 5%;"></div>
+</div>
+<p class="text-sm font-medium text-plomapp-dark-gray w-10 text-right">5%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-plomapp-dark-gray w-8">2 <span class="material-symbols-outlined text-sm">star</span></p>
+<div class="flex-1 h-2.5 bg-plomapp-gray rounded-full">
+<div class="bg-plomapp-blue h-2.5 rounded-full" style="width: 3%;"></div>
+</div>
+<p class="text-sm font-medium text-plomapp-dark-gray w-10 text-right">3%</p>
+</div>
+<div class="flex items-center gap-2">
+<p class="text-sm font-medium text-plomapp-dark-gray w-8">1 <span class="material-symbols-outlined text-sm">star</span></p>
+<div class="flex-1 h-2.5 bg-plomapp-gray rounded-full">
+<div class="bg-red-500 h-2.5 rounded-full" style="width: 2%;"></div>
+</div>
+<p class="text-sm font-medium text-plomapp-dark-gray w-10 text-right">2%</p>
+</div>
+</div>
+</div>
+<div class="p-6 rounded-xl border border-plomapp-gray">
+<h3 class="text-xl font-bold mb-4 text-plomapp-text flex items-center gap-2"><span class="material-symbols-outlined text-plomapp-green">build</span>Especialidades</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-plomapp-blue/10 text-plomapp-blue text-sm font-semibold px-3 py-1 rounded-full">Reparación de Tuberías</span>
+<span class="bg-plomapp-blue/10 text-plomapp-blue text-sm font-semibold px-3 py-1 rounded-full">Instalaciones Sanitarias</span>
+<span class="bg-plomapp-blue/10 text-plomapp-blue text-sm font-semibold px-3 py-1 rounded-full">Mantenimiento</span>
+<span class="bg-plomapp-blue/10 text-plomapp-blue text-sm font-semibold px-3 py-1 rounded-full">Detección de Fugas</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-plomapp-white py-4 mt-8 border-t border-plomapp-gray">
+<div class="container mx-auto text-center text-plomapp-dark-gray text-sm">
+<p>© 2024 PlomApp. Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+
+</body></html>
